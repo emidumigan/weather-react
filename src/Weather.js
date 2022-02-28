@@ -88,7 +88,7 @@ export default function Weather() {
   
           <small>
             <a
-              href="https://github.com/emidumigan/vanilla-weather-app"
+              href="https://github.com/emidumigan/weather-react"
               target="blank"
             >
               Open-source code
