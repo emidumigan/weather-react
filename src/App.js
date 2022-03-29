@@ -3,10 +3,23 @@ import Weather from "./Weather";
 
 import './App.css';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      Weather App
+      <div className="container">
+      <Weather />
+    </div>
+    <footer>
+ 
+            <a
+              href="https://github.com/emidumigan/weather-react"
+              target="blank"
+            >
+              Open-source code
+            </a>{" "}
+            by Emi Dumigan
+       
+    </footer>
     </div>
   );
 }
