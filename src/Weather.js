@@ -15,7 +15,10 @@ export default function Weather() {
     };
   
     return (
+      
       <div classNAme="Weather">
+        
+        <div className="container">
         <div className="wrapper">
           <form classNAme="search-form nb-3">
             <div classNAme="row">
@@ -95,6 +98,7 @@ export default function Weather() {
             </a>{" "}
             by Emi Dumigan
           </small>
+        </div>
         </div>
       </div>
     );
