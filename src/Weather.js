@@ -18,7 +18,7 @@ export default function Weather() {
       
       <div classNAme="Weather">
         
-        <div className="container">
+       
         <div className="wrapper">
           <form classNAme="search-form nb-3">
             <div classNAme="row">
@@ -89,17 +89,9 @@ export default function Weather() {
             </div>
           </div>
   
-          <small>
-            <a
-              href="https://github.com/emidumigan/weather-react"
-              target="blank"
-            >
-              Open-source code
-            </a>{" "}
-            by Emi Dumigan
-          </small>
+          
         </div>
-        </div>
+       
       </div>
     );
   }
