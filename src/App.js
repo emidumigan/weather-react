@@ -1,16 +1,15 @@
 import React from "react";
 import Weather from "./Weather";
-import './App.css';
+import "./App.css";
 
 export default function App() {
   return (
     <div className="App">
       <div className="container">
-      <Weather defaultCity="New York"/>
-    </div>
-    <footer>
- 
-            <a
+        <Weather defaultCity="New York" />
+
+        <footer>
+        <a
               href="https://github.com/emidumigan/weather-react"
               target="blank"
             >
@@ -18,9 +17,11 @@ export default function App() {
             </a>{" "}
             by Emi Dumigan
        
-    </footer>
+        </footer>
+      </div>
     </div>
   );
 }
+    
+  
 
-export default App;
