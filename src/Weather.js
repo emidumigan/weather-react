@@ -1,31 +1,31 @@
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate";
 import axios from "axios";
 import "./Weather.css";
 
 export default function Weather(props) {
 
   
-  const [weatherData, setWeatherData] = useState({ready: false});
+  const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response){
-    console.log(response.data);
+
     setWeatherData({
     ready: true,
     city: response.data.name,
-    date: "Tuesday 13:10",
+    date: new Date(response.data.dt * 1000),
     temperature: response.data.main.temp,
     wind: response.data.wind.speed,
     humidity: response.data.main.humidity,
     description: response.data.weather[0].description,
-    iconUrl: "http://openweathermap.org/img/wn/02n@2x.png"
+    iconUrl: "http://openweathermap.org/img/wn/02n@2x.png",
    
   });
 
   }
 
-  if(weatherData.ready){ 
-    return
-( 
+  if (weatherData.ready) { 
+    return ( 
 <div className="Weather">
         <div className="wrapper">
           <form className="search-form nb-3">
@@ -53,7 +53,7 @@ export default function Weather(props) {
           <div className="overview">
             <h1>{weatherData.city}</h1>
             <ul>
-              <li className="date">{weatherData.date}</li>
+              <li className="date"><FormattedDate date={weatherData.date} /></li>
               <li className="weather-condition text-capitalize">{weatherData.description}</li>
             </ul>
           </div>
